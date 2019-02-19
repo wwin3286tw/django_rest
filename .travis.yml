@@ -1,0 +1,7 @@
+language: python
+python: 
+ - "3.5"
+install:
+  - pip install -q -r requirement.txt
+script:
+  - cd PointServer/ && python manage.py test
