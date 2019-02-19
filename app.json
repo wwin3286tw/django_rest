@@ -1,0 +1,22 @@
+{
+  "name": "App backend for shit",
+  "description": "Easy way to make you mad",
+  "image": "heroku/python",
+  "repository": "https://github.com/wwin3286tw/django_app_backend",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "abjor5(9$8f6x5^kpr^*c+_8gun#19*y2@p&oab*n64*%7lfp0",
+      "generator": "secret"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python3 manage.py collectstatic --noinput",
+        "test": "python3 manage.py test"
+      }
+    }
+  }
+}
