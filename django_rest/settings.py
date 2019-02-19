@@ -118,8 +118,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
-import django_heroku
-django_heroku.settings(locals())
-
-
+STATIC_URL = '/static/' 
+if 'HEROKU' in os.environ:
+    import django_heroku
+    django_heroku.settings(locals())
