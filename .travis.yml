@@ -4,4 +4,4 @@ python:
 install:
   - pip install -q -r requirement.txt
 script:
-  - cd PointServer/ && python manage.py test
+  -  python3 manage.py test
