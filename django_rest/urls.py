@@ -19,13 +19,13 @@ from django.conf.urls import url, include
 
 #from musics.views import hello_view
 #from musics.views import root_view
-from rest_framework.routers import DefaultRouter
-from musics import views
+#from rest_framework.routers import DefaultRouter
+#from musics import views
 
-router = DefaultRouter()
-router.register(r'music', views.MusicViewSet)
+#router = DefaultRouter()
+#router.register(r'music', views.MusicViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    #path('api/', include(router.urls))
 ]
