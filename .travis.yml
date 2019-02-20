@@ -3,6 +3,6 @@ language: python
 python: 
  - "3.5"
 install:
- python3 -m pip install django gunicorn django-heroku djangorestframework
+ python3 -m pip install django gunicorn django-heroku djangorestframework coreapi
 script:
   -  python3 manage.py test
