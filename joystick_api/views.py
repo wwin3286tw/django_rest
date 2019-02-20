@@ -12,4 +12,4 @@ class APIViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = JAPI_Serializer
-    http_method_names = ['get']
+    http_method_names = ['get','post']
