@@ -2,7 +2,7 @@ from django.db import models
 import uuid
 # Create your models here.
 class User(models.Model):
-    username = models.TextField(max_length=32)
+    username = models.TextField(max_length=32,verbose_name=u"使用者名稱")
     phone = models.TextField(max_length=20)
     email = models.EmailField(max_length=255, unique=True)
     userpass = models.TextField(max_length=64)

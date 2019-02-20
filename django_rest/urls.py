@@ -23,13 +23,18 @@ from joystick_api import views
 #from musics.views import hello_view
 #from musics.views import root_view
 from rest_framework.routers import DefaultRouter
+from rest_framework.documentation import include_docs_urls
+from rest_framework import routers
+
 #from musics import views
+
+
 
 router = DefaultRouter()
 router.register(r'User', views.APIViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
-    path('JAPI/', include(router.urls)),
+    url(r'^JAPI/', include(router.urls),include_docs_urls(title='JoyStick Applcation Backend',description="Test", public=True)),
     #path('api/', include(router.urls))
 ]
