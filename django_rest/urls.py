@@ -35,7 +35,7 @@ router.register(r'User', views.APIViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
-    url(r'^JAPI/', include(router.urls)),
+    path('JAPI/', include(router.urls)),
     #path(''),
     path('/api-doc',include_docs_urls(title='JoyStick Applcation Backend',description="Test", public=True))
     #path('api/', include(router.urls))
