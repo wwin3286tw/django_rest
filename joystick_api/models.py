@@ -2,11 +2,12 @@ from django.db import models
 import uuid
 # Create your models here.
 class User(models.Model):
+    #user=models.ForeignKey(User)
     username = models.TextField(max_length=32,verbose_name=u"使用者名稱",help_text=("使用者名稱，只能輸入小寫英文數字"))
     phone = models.TextField(max_length=20)
     email = models.EmailField(max_length=255, unique=True)
     userpass = models.TextField(max_length=64)
-    user_uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user_uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, blank=True)
     birthday = models.DateField(verbose_name=u"生日",default=u"1900-01-01")
     fb_access_token= models.TextField()
     fb_userid = models.TextField()
